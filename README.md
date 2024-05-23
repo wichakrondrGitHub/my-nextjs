@@ -1,6 +1,8 @@
 # Next.js & NextUI Template
 
 This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+<img src="https://github.com/wichakrondrGitHub/my-nextjs/blob/main/public/preview_light_mode.png" width="90%"></img> 
+<img src="https://github.com/wichakrondrGitHub/my-nextjs/blob/main/public/preview_dark_mode.png" width="90%"></img> 
 
 [Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
 
