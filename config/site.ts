@@ -56,7 +56,7 @@ export const siteConfig = {
     github: "https://github.com/wichakrondrGitHub",
     instagram:
       "https://www.instagram.com/coder_dear/?igsh=MzkwMWUxeHVmMHh5&utm_source=qr",
-    linkedin: "https://discord.gg/9b6yyZKmH4",
+    linkedin: "https://www.linkedin.com/in/wichakron-khunkhangsaeng-b59543229",
     gitlab: "https://gitlab.com/wichakrondr",
   },
 };
