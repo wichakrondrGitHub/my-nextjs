@@ -22,9 +22,9 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
 }) => {
   return (
     <div className="mb-5">
-      <Card className="sm:mx-0" hoverable clickable>
+      <Card className="sm:mx-0">
         <Link href={postUrl} aria-label={title}>
-          <CardBody css={{ p: 0 }}>
+          <CardBody>
             <NextImage
               alt={`Cover Image for ${title}`}
               src={imageUrl}
@@ -50,7 +50,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
         </Link>
       </Card>
 
-      <div h3 className="text-3xl mb-3 leading-snug">
+      <div className="text-3xl mb-3 leading-snug">
         <Link href={postUrl} className="hover:underline">
           {title}
         </Link>
@@ -62,7 +62,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({
 
       <div className="text-lg leading-relaxed mb-4">{description}</div>
 
-      <div align="center">
+      <div>
         <NextImage
           src={authorImage}
           className="w-12 h-12 rounded-full mr-4"
