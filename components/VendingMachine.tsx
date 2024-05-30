@@ -141,9 +141,7 @@ const VendingMachine: React.FC = () => {
       <div className="mt-4 justify-center flex flex-col">
         <h3>Credit: ฿{credit.toFixed(2)}</h3>
         <h3>Selected Product: {selectedProduct?.name}</h3>
-        {selectedProduct?.quantity && (
-          <h3>Quantity: {selectedProduct?.quantity}</h3>
-        )}
+
         <Button onClick={handleBuyProduct} className="mt-4">
           Buy
         </Button>

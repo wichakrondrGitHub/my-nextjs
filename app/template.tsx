@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useSwitch } from "@nextui-org/switch";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const variants = {
   hidden: { opacity: 0, x: -50, y: 0 },

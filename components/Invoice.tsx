@@ -15,7 +15,7 @@ const Invoice: React.FC = () => {
   );
 
   return (
-    <div className="invoice">
+    <div className="invoice bg-slate-50 p-5  rounded-lg w-[520px]">
       <h2 className="text-2xl font-semibold mb-4">Invoice</h2>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">

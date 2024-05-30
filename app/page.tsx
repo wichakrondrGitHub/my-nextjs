@@ -1,7 +1,6 @@
 import React from "react";
 import Wallet from "@/components/Wallet";
 import VendingMachine from "@/components/VendingMachine";
-import Moon from "@/components/Moon";
 import Invoice from "@/components/Invoice";
 
 const HomePage: React.FC = () => {

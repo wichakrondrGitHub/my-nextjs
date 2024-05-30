@@ -42,7 +42,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <div className="relative flex flex-col h-screen dark:bg-[url('/bg.jpg')]  bg-repeat	 bg-[url('/bg-light.jpg')] md:overflow-hidden overflow-auto ">
+          <div className="relative flex flex-col h-screen dark:bg-[url('/bg.jpg')]  	 bg-[url('/bg-light.jpg')] md:overflow-hidden overflow-auto ">
             <Navbar />
             <main className=" grid container mx-auto max-w-7xl  px-6 flex-grow  items-center justify-center   md:overflow-hidden overflow-auto">
               {children}
