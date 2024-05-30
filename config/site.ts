@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Home",
+      label: "HOME",
       href: "/",
     },
     {
@@ -17,12 +17,11 @@ export const siteConfig = {
       href: "https://everymatrix.com/services/",
     },
   ],
-
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/wichakrondrGitHub",
+    instagram:
+      "https://www.instagram.com/coder_dear/?igsh=MzkwMWUxeHVmMHh5&utm_source=qr",
+    linkedin: "https://www.linkedin.com/in/wichakron-khunkhangsaeng-b59543229",
+    gitlab: "https://gitlab.com/wichakrondr",
   },
 };
