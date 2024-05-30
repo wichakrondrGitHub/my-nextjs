@@ -1,6 +1,7 @@
 import { products } from "@/data/products";
 import { Product } from "@/interface/product";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { stat } from "fs";
 
 interface VendingMachineState {
   products: Product[];
@@ -8,7 +9,7 @@ interface VendingMachineState {
   selectedProductId?: string;
   selectedProduct?: Product;
   isSuccess?: boolean;
-  invoiceProduct: { product: Product; quantity: number }[];
+  invoiceProduct: Product[];
 }
 
 // Remove duplicate products from the initial state
@@ -38,7 +39,7 @@ const vendingMachineSlice = createSlice({
 
       // Find the product in the invoice list
       const invoiceProductIndex = state.invoiceProduct.findIndex(
-        (invoice) => invoice.product.id === selectedProduct.id
+        (invoice) => invoice.id === selectedProduct.id
       );
 
       if (invoiceProductIndex >= 0) {
@@ -46,7 +47,7 @@ const vendingMachineSlice = createSlice({
         state.invoiceProduct[invoiceProductIndex].quantity += 1;
       } else {
         // Add new product to the invoice
-        state.invoiceProduct.push({ product: selectedProduct, quantity: 1 });
+        state.invoiceProduct.push({ ...selectedProduct, quantity: 1 });
       }
 
       // Update the quantity of the selected product in the products list
@@ -62,21 +63,12 @@ const vendingMachineSlice = createSlice({
     },
     buyProduct(state) {
       const product = state.selectedProduct;
-      if (product) {
-        const invoiceItem = state.invoiceProduct.find(
-          (invoice) => invoice.product.id === product.id
-        );
-        if (
-          invoiceItem &&
-          invoiceItem.quantity > 0 &&
-          state.credit >= product.price * invoiceItem.quantity
-        ) {
-          state.credit -= product.price * invoiceItem.quantity;
-          state.isSuccess = true;
-        } else {
-          state.isSuccess = false;
-        }
-      }
+      const total = state.invoiceProduct.reduce(
+        (total, product) => total + product.price * product.quantity,
+        0
+      );
+      state.credit = state.credit - total;
+      state.invoiceProduct = [];
     },
   },
 });

@@ -1,12 +1,18 @@
 import React from "react";
 import Wallet from "@/components/Wallet";
 import VendingMachine from "@/components/VendingMachine";
+import Moon from "@/components/Moon";
+import Invoice from "@/components/Invoice";
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
-      <Wallet />
+    // <div className=" flex items-center justify-center bg-white dark:bg-black p-4 md:flex-row flex-col">
+    <div className=" flex items-center justify-center  p-4 md:flex-row flex-col  gap-9">
       <VendingMachine />
+      <div className="flex-1">
+        <Wallet />
+        <Invoice />
+      </div>
     </div>
   );
 };
