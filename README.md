@@ -1,53 +1,69 @@
-# Next.js & NextUI Template
+# Vending Machine App
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+This project is an online vending machine simulation built using Next.js 14, NextUI v2, Tailwind CSS, Tailwind Variants, TypeScript, Framer Motion, and next-themes.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+Installation and Usage
+Prerequisites
+Make sure you have Node.js and npm installed on your machine.
 
-## Technologies Used
+### Installation
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/vending-machine.git
+   ```
+
+2. Navigate into the project directory:
+   ```bash
+   cd vending-machine
+   ```
+3. Install dependencies:
+   ```bash
+   You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `yarn`:
+   ```
+4. Run the development server:
+   ````bash
+   yarn dev
+      ```
+   This will start the development server and the app will be accessible at http://localhost:3000.
+   ````
 
 ## How to Use
 
-### Use the template with create-next-app
+#### This is example data for display Vending products
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+You can update Product in folder /data/product.ts.
 
 ```bash
-npm install
+export const products: Product[] = [
+ {
+   id: "A2",
+   name: "Chips",
+   price: 20,
+   quantity: 5,
+   imageUrl: "/products/lays.jpeg",
+ },
+ {
+   id: "A3",
+   name: "Pepsi",
+   price: 15,
+   quantity: 10,
+   imageUrl: "/products/pepsi.jpeg",
+ },
+ {
+   id: "A4",
+   name: "Cofee",
+   price: 15,
+   quantity: 15,
+   imageUrl: "/products/coffee.jpeg",
+ },
+ {
+   id: "A5",
+   name: "Beef",
+   price: 1200,
+   quantity: 15,
+   imageUrl: "/products/wagyu.jpeg",
+ },
+];
 ```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
