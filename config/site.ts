@@ -8,7 +8,14 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-
+    {
+      label: "Docs",
+      href: "/docs",
+    },
+    {
+      label: "Pricing",
+      href: "/pricing",
+    },
     {
       label: "Blog",
       href: "/blog",
@@ -53,10 +60,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/wichakrondrGitHub",
-    instagram:
-      "https://www.instagram.com/coder_dear/?igsh=MzkwMWUxeHVmMHh5&utm_source=qr",
-    linkedin: "https://www.linkedin.com/in/wichakron-khunkhangsaeng-b59543229",
-    gitlab: "https://gitlab.com/wichakrondr",
+    github: "https://github.com/nextui-org/nextui",
+    twitter: "https://twitter.com/getnextui",
+    docs: "https://nextui.org",
+    discord: "https://discord.gg/9b6yyZKmH4",
+    sponsor: "https://patreon.com/jrgarciadev",
   },
 };
